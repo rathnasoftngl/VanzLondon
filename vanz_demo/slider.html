@@ -1,0 +1,141 @@
+<link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<style class="cp-pen-styles">
+.slideshow {
+  list-style: none;
+  z-index: 1;
+  margin:0px 30px 20px 30px;
+  height:300px;
+}
+
+.slideshow li span {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background:url(images/slider5.jpg);
+  background-size: 100% 100%;
+  /*background-position: 50% 50%;*/
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  /*-webkit-backface-visibility: hidden;
+  backface-visibility: hidden;*/
+  -webkit-animation: imageAnimation 15s infinite;
+  -moz-animation: imageAnimation 15s infinite;
+  animation: imageAnimation 15s infinite;
+}
+
+@media only screen and (min-width: 768px) {
+
+.slideshow li h3 {
+  bottom: 30px;
+  font-size: 2em;
+}
+}
+@media only screen and (min-width: 1024px) {
+
+.slideshow li h3 { font-size: 2em; }
+}
+
+.slideshow li:nth-child(1) span { background-image:url(images/slider1.jpg); }
+
+.slideshow li:nth-child(2) span {
+  background-image: url(images/slider2.jpg);
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.slideshow li:nth-child(3) span {
+  background-image: url(images/slider3.jpg);
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.slideshow li:nth-child(4) span {
+  background-image: url(images/slider4.jpg);
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(5) span {
+  background-image: url(images/slider5.jpg);
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  animation-delay: 15s;
+}
+ @-webkit-keyframes 
+imageAnimation {  0% {
+ opacity: 0;
+ -webkit-animation-timing-function: ease-in;
+}
+ 12.5% {
+ opacity: 0.5;
+ -webkit-animation-timing-function: ease-out;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 1;
+}
+}
+@-moz-keyframes 
+imageAnimation {  0% {
+ opacity: 0;
+ -moz-animation-timing-function: ease-in;
+}
+ 12.5% {
+ opacity: 0.5;
+ -moz-animation-timing-function: ease-out;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 1;
+}
+}
+@keyframes 
+imageAnimation {  0% {
+ opacity: 0;
+ -webkit-animation-timing-function: ease-in;
+ -moz-animation-timing-function: ease-in;
+ animation-timing-function: ease-in;
+}
+ 12.5% {
+ opacity: 0.5;
+ -webkit-animation-timing-function: ease-out;
+ -moz-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 1;
+}
+}
+.no-cssanimations .slideshow li span { opacity: 1; }
+</style>
+
+<ul class="slideshow">
+  <li><span>Slide One</span> </li>
+  <li> <span>Slide Two</span> </li>
+  <li> <span>Slide Three</span> </li>
+  <li> <span>Slide Four</span> </li>
+  <li> <span>Slide five</span> </li>
+</ul>
